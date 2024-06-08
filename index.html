@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Game Selector</h1>
+        <select id="game-select" style="width: 200px;">
+            <option value="https://www.desmos.com/scientific">Calculator</option>
+            <option value="https://www.khanacademy.org/math/alg/equations-systems/alg-eq-sys-intro">Khan Academy Math</option>
+            <option value="https://www.coolmathgames.com/0-advanced-3d-games/puzzle-3d-sudoku">Cool Math Games</option>
+            <!-- Add more game options here -->
+        </select>
+        <button id="play-btn" style="margin-left: 10px;">Play</button>
+    </header>
+    <iframe id="game-frame" width="100%" height="450px" frameborder="0"></iframe>
+    <footer>
+        <button id="full-screen-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Full Screen</button>
+        <button id="save-options-btn" style="position: absolute; bottom: 0; right: 0;">Save Options</button>
+        <button id="settings-btn" style="position: absolute; bottom: 0; right: 100px;">Settings</button>
+    </footer>
+    <!-- Settings popup -->
+    <div id="settings-popup" style="display: none;">
+        <h2>Settings</h2>
+        <label>Background:</label>
+        <select id="background-select">
+            <option value="#000">Midnight Ocean</option>
+            <option value="#3498db">Tropical</option>
+            <option value="#1f1f1f">Sea Gradient</option>
+        </select>
+        <br><br>
+        <label>Background Music:</label>
+        <input type="file" id="music-file-input" accept=".mp3">
+        <button id="music-play-btn">Play Music</button>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
